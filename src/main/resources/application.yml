@@ -1,0 +1,28 @@
+server:
+  port: 8080
+spring:
+  application:
+    #application 对应的是哪个文件名的
+    name: reggie_take_out
+  mail:
+    host: smtp.qq.com
+    username: 572474382@qq.com #发件人的邮箱，填写你自己的
+    password: xjaaxhqugfuabegh #QQ邮箱授权码
+    default-encoding: UTF-8 # 默认的字符集编码
+
+  datasource:
+    druid:
+      driver-class-name: com.mysql.cj.jdbc.Driver
+      url: jdbc:mysql://localhost:3306/rigge?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: root
+      password: 123456
+mybatis-plus:
+  configuration:
+    #在映射实体或者属性时，将数据库中表名和字段名中的下划线去掉，按照驼峰命名法映射
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  global-config:
+    db-config:
+      id-type: ASSIGN_ID
+reggie:
+  path: D:\img\
